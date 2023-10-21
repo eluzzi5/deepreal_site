@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep Real</title>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='../static/webcam.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='../static/main.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='../static/session.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='../static/util.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/style.css') }}">
+    <link rel='icon' href="{{ url_for('static',filename='../static/favicon.png') }}" type='image/x-icon'>
+</head>
+<body>
+<input type="text" value="localhost:5000" id="ip_addr"/>
+<div id="login">
+</div>
+<div id="input">
+    <div id="webcam_view" class="input_view">
+        <div id="intro_section">
+            <div id="intro_title">
+                FIRST, WE NEED TO <br> VERIFY YOUR IDENTITY
+            </div>
+            <!-- <div id="intro_header">
+                FIRST, WE NEED TO <br> VERIFY YOUR IDENTITY
+            </div> -->
+            <div id="intro_instructions">
+                - LOOK STRAIGHT AHEAD AT THE CAMERA <br>
+                - MAKE SURE YOU'RE IN A WELL LIT SETTING <br>
+                - DO NOT SMILE OR MOVE YOUR FACE <br>
+            </div>
+            <button id="turn_on_button">
+                ENABLE CAMERA
+            </button>
+        </div>
+        <div id="record_section">
+            <video id="webcam_preview" autoplay muted></video>
+            <div id="please_wait">
+                <div id="record-instructions">
+                BE STILL
+                <br>
+                </div>
+                <div id="head_guide">
+                    <img src="{{ url_for('static',filename='../static/view1.png') }}" alt='Scanning...'>
+                </div>                
+            </div>
+            <div id="move_forward">
+                <div id="record-instructions">
+                MOVE HEAD FORWARD
+                <br>
+                </div>
+                <div id="head_guide">
+                    <img src="{{ url_for('static',filename='../static/view2.gif') }}" alt='Scanning...'>
+                </div>
+            </div>
+            <div id="move_backward">
+                <div id="record-instructions">
+                MOVE HEAD BACK
+                <br>
+                </div>
+                <div id="head_guide">
+                    <img src="{{ url_for('static',filename='../static/view3.gif') }}" alt='Scanning...'>
+                </div>
+            </div>
+            <div id="identity">
+                <div id="record-instructions">
+                VERIFYING IDENTITY...
+                <br>
+                </div>
+                <div id="head_guide">
+                    <img src="{{ url_for('static',filename='../static/view4.png') }}" alt='Scanning...'>
+                </div>
+            </div>
+            <div id="name">
+                <div id="record-instructions">
+                <span class="jsValue" id="jsValue"></span>
+                <br>
+                </div>
+                <div id="head_guide">
+                    <img src="{{ url_for('static',filename='../static/view5.png') }}" alt='Scanning...'>
+                </div>
+                <br>
+            </div>
+            <button id="start_button">
+                Start Recording
+            </button>
+            <button id="stop_button">Stop Recording</button>
+        </div>
+    </div>
+    <div id="playback_view" class="input_view">
+        <video id="playback" controls></video>
+        <button id="redo_button">
+            Re-record video
+        </button>
+        <button id="upload_button">
+            Use this video
+        </button>
+    </div>
+</div>
+<div id="session">
+    <div id="selector">
+        <div class="session_title">DEEPREAL</div>
+        <div class="session_content">
+            <div id="login-error-msg-holder">
+                <p id="login-error-msg">Invalid password</p>
+              </div>
+            <form id ="login-form">
+                <input type="password" placeholder="Password" id="password" name="password">
+                <br>
+                    
+                <div class="hideCheckbox" style="font-size:15px">
+                    <label for="checkbox1" class="checkboxes">
+                        <input type="checkbox" id="checkbox1" name="checked" value="yes" class="checkboxes" onclick="hidePassword()"/>
+                        &ensp; Hide password</label>
+                </div>
+                <br>
+                <!-- <input type="submit" id="submit_button_DOM"> -->
+            </form>
+            <button id="submit_button">SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

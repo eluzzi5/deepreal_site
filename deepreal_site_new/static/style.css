@@ -1,0 +1,283 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 80vh;
+
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 2em;
+    
+    background-color: #000000;
+    color: #97E7D5;
+
+    padding-top: 100px;
+    margin: 0;
+}
+
+body * {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body div {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 3px solid #97E7D5;
+
+    color: #97E7D5;
+    background-color: #000;
+
+    font-size: 0.75em;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+}
+
+label {
+    display: inline-block;
+}
+
+.checkboxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+
+input[type="checkbox"]
+{
+    vertical-align:middle;
+}
+
+button:active {
+    top: 2px;
+}
+
+button:hover {
+
+   background-color: #97E7D5;
+   color: #000;
+}
+
+#login-error-msg-holder {
+    width: 100%;
+    height: 0%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+#login-error-msg {
+    width: 50%;
+    text-align: center;
+    margin: 35;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    border-radius: 10%;
+    background-color: #e58f8f;
+    opacity: 0;
+  }
+
+#ip_addr {
+    display: None;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body > div {
+    height: 100%;
+}
+
+#intro_title {
+    font-size: 50px  !important;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+#intro_header {
+    font-size: 50px;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+#intro_instructions {
+    line-height: 1.25em;
+}
+
+#turn_on_button {
+    margin-top: 4em;
+}
+
+#preview_block {
+    max-width: 50%;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#preview_block > * {
+    width: 100%;
+    height: 100%;
+}
+
+#webcam_preview {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#head_guide {
+   /* border: 3px solid #97E7D5;*/
+    /* position: absolute;
+    width: 50%;
+    height: 66%;
+    left: 25%;
+    top: 8%; */
+    /* display: block;
+    margin-left: 30%;
+    margin-right: 70%; 
+    width: 50% */
+
+    display: table-cell;
+    height: 300px;
+    text-align: center;
+    width: 300px;
+    vertical-align: middle;
+}
+
+#please_wait, #move_forward, #move_backward, #identity, #name {
+    margin: 70;
+}
+
+#passage, #record_instructions {
+    text-align: center;
+    font-size:  200px;
+}
+
+#passage {
+    font-size: 0.8em;
+    margin: 1.5em auto;
+}
+
+#playback_view {
+    width: 30em;
+}
+
+#playback {
+    max-width: 80%;
+    margin-bottom: 1em;
+}
+
+#redo_button, #upload_button {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*
+Post-upload view
+ */
+
+#session {
+    flex-direction: row;
+    width: 95%;
+    height: 80%;
+    max-width: 1500px;
+}
+
+#session > div {
+    width: 100%;
+
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*margin-top: 50px;*/
+}
+
+.session_title {
+    margin-bottom: 1em;
+}
+
+.session_content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#original_vid, #options {
+    width: 100%;
+    display: flex;
+    font-size: 0.75em;
+}
+
+select {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 0.75em;
+}
+
+#voice_clone {
+    height: 2em;
+    width: 1.5em;
+}
+
+#src_video {
+    margin: 10px auto;
+    /*height: 60%;*/
+    width: 60%;
+}
+
+
+#original_vid > button {
+    border-width: 2px;
+    border-radius: 7px;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.wrapper > *:first-child {
+    margin-bottom: 5px;
+}
+
+#selector_options > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#out_display {
+    width: 100%;
+}
+
+#out_display > .session_content {
+    justify-content: center;
+    margin: 0;
+    /*padding-bottom: 20%;*/
+}
+
+#out_display video {
+    width: 80%;
+    height: 60%;
+}
